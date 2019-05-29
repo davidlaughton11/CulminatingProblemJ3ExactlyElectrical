@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CulminatingProblemJ3ExactlyElectrical
+namespace CulminatingProblemJ4FavouriteTimes
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,48 +23,6 @@ namespace CulminatingProblemJ3ExactlyElectrical
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void start_Click(object sender, RoutedEventArgs e)
-        {
-            string startingCoords = startingCoordinate.Text;
-            double a;           
-            string aString;
-            double b;
-            string bString;
-            string[] splitStarting = startingCoords.Split(null);
-            aString = splitStarting[0].ToString();
-            double.TryParse(aString, out a);
-            bString = splitStarting[1].ToString();
-            double.TryParse(bString, out b);
-
-            string destinationCoords = destinationCoordinate.Text;
-            double c;
-            string cString;
-            double d;
-            string dString;
-            string[] splitDestination = destinationCoords.Split(null);
-            cString = splitDestination[0].ToString();
-            double.TryParse(cString, out c);
-            dString = splitDestination[1].ToString();
-            double.TryParse(dString, out d);
-
-            double t;
-            double.TryParse(chargeOfBattery.Text, out t);
-
-            Math.Abs(a);
-            Math.Abs(b);
-            Math.Abs(c);
-            Math.Abs(d);
-
-            if (Math.Abs(a - c) + Math.Abs(b - d) >= t)
-            {
-                lblOutput.Content = "Y";
-            }
-            else
-            {
-                lblOutput.Content = "N";
-            }
         }
     }
 }
