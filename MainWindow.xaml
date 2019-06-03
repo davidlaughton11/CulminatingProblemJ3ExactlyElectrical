@@ -1,12 +1,24 @@
-﻿<Window x:Class="CulminatingProblemJ4FavouriteTimes.MainWindow"
+﻿<Window x:Class="CulminatingProblemJ3ExactlyElectrical.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CulminatingProblemJ4FavouriteTimes"
+        xmlns:local="clr-namespace:CulminatingProblemJ3ExactlyElectrical"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-        
+        <TextBlock TextWrapping="Wrap">You live in Grid City, which is composed of integer-numbered streets which run east-west (parallel
+        to the x-axis) and integer-numbered avenues which run north-south (parallel to the y-axis). The
+        streets and avenues have infinite length, and there is a street for every integer y-coordinate and
+        an avenue for every x-coordinate.</TextBlock>
+        <TextBlock>Enter starting coordinate example:x y</TextBlock>
+        <TextBox x:Name="startingCoordinate"></TextBox>
+        <TextBlock>Enter destination coordinate example:x y</TextBlock>
+        <TextBox x:Name="destinationCoordinate"></TextBox>
+        <TextBlock>Enter number of units of electrical charge of your battery.</TextBlock>
+        <TextBox x:Name="chargeOfBattery"></TextBox>
+        <Button x:Name="start" Click="start_Click">Click to start</Button>
+        <TextBlock>Is it possible Output:</TextBlock>
+        <Label x:Name="lblOutput"></Label>
     </StackPanel>
 </Window>
