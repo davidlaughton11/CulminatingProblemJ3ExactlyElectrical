@@ -31,6 +31,7 @@ namespace CulminatingProblemJ3ExactlyElectrical
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
+            //Input for starting postion from one line of textbox
             string startingCoords = startingCoordinate.Text;
             double a;           
             string aString;
@@ -42,6 +43,7 @@ namespace CulminatingProblemJ3ExactlyElectrical
             bString = splitStarting[1].ToString();
             double.TryParse(bString, out b);
 
+            //Input for finishing postion from one line of textbox
             string destinationCoords = destinationCoordinate.Text;
             double c;
             string cString;
@@ -53,15 +55,18 @@ namespace CulminatingProblemJ3ExactlyElectrical
             dString = splitDestination[1].ToString();
             double.TryParse(dString, out d);
 
+            //Charage of battary which is how many squares the car can move
             double t;
             double.TryParse(chargeOfBattery.Text, out t);
-
+            
+            //making the numbers possitive
             Math.Abs(a);
             Math.Abs(b);
             Math.Abs(c);
             Math.Abs(d);
 
-            if (Math.Abs(a - c) + Math.Abs(b - d) == t)
+            //If the car can travel that far with the battary it has
+            if (Math.Abs(a - c) + Math.Abs(b - d) <= t)
             {
                 lblOutput.Content = "Y";
             }
